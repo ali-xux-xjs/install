@@ -9,7 +9,7 @@ yarn install
 
 echo "#!/bin/bash" >  ./cmd_upgrade.sh
 echo "if [ ! -e \"./node_modules\" ]; then" >> ./cmd_upgrade.sh
-echo "    yarn run upgrade" >> ./cmd_upgrade.sh
+echo "    yarn run upgrade; exit 0;" >> ./cmd_upgrade.sh
 echo "fi" >> ./cmd_upgrade.sh
 echo "./node_modules/@ali/axjs/cmd_upgrade.sh" >> ./cmd_upgrade.sh
 echo "#!/bin/bash" >  ./cmd_make.sh
