@@ -15,7 +15,7 @@ echo "./node_modules/@ali/axjs/cmd_upgrade.sh" >> ./cmd_upgrade.sh
 echo "#!/bin/bash" >  ./cmd_make.sh
 echo "./node_modules/@ali/axjs/cmd_make.sh" >> ./cmd_make.sh
 echo "#!/bin/bash" >  ./cmd_debug.sh
-echo "if [ \"\$1\" == \"x\" ]; then" >> ./cmd_debug.sh
+echo "if [ \"$$1\" == \"x\" ]; then" >> ./cmd_debug.sh
 echo "    killall node; exit 0;" >> ./cmd_debug.sh
 echo "fi" >> ./cmd_debug.sh
 echo "./node_modules/@ali/axjs/cmd_debug_app.sh $1" >> ./cmd_debug.sh
