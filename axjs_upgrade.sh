@@ -7,8 +7,9 @@ rm -rf ./package-lock.json ./npm-debug.log ./yarn.lock ./yarn-error.log
 rm -rf ./node_modules
 yarn install
 
-mkdir -p ./app
-cp -rvf ./node_modules/@ali/axjs/global.d.ts ./app/
+mkdir -p ./app/entries/rest ./app/entries/web ./app/modules ./app/services ./app/plugins ./app/static
+# cp -rvf ./node_modules/@ali/axjs/global.d.ts ./app/
+
 
 echo "#!/bin/bash" >  ./cmd_upgrade.sh
 echo "yarn run upgrade" >> ./cmd_upgrade.sh
