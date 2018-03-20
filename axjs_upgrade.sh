@@ -8,7 +8,7 @@ rm -rf ./node_modules
 yarn install
 
 mkdir -p ./app/entries/rest ./app/entries/web ./app/modules ./app/services ./app/plugins ./app/static
-# cp -rvf ./node_modules/@ali/axjs/global.d.ts ./app/
+cp -rvf ./node_modules/@ali/axjs/global.d.ts ./
 
 
 echo "#!/bin/bash" >  ./cmd_upgrade.sh
