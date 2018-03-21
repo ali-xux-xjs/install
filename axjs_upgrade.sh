@@ -3,14 +3,13 @@
 # APP中升级所有的包到最新版本以及初始化shell命令脚本
 
 killall node
-rm -rf ./package-lock.json ./npm-debug.log ./yarn.lock ./yarn-error.log
-rm -rf ./node_modules
-yarn install
+# rm -rf ./package-lock.json ./npm-debug.log ./yarn.lock ./yarn-error.log
+# rm -rf ./node_modules
+# yarn install
+yarn upgrade
 
 mkdir -p ./app/entries/rest ./app/entries/web ./app/modules ./app/services ./app/plugins ./app/static
 # cp -rvf ./node_modules/@ali/axjs/global.d.ts ./
-
-
 
 echo "#!/bin/bash" >  ./cmd_upgrade.sh
 echo "yarn run upgrade" >> ./cmd_upgrade.sh
